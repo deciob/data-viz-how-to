@@ -1,0 +1,34 @@
+{
+  "name": "data-viz-how-to",
+  "version": "0.0.1",
+  "description": "About creating good data visualizations",
+  "main": "main.js",
+  "repository": "https://example.com/your-username/my-new-project",
+  "author": "Decio Battaglia <decio.battaglia@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "rlite-router": "^2.0.1"
+  },
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "eslint": "^3.17.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "http-server": "^0.9.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-postcss": "^0.2.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2"
+  },
+  "scripts": {
+    "start": "http-server",
+    "watch": "rollup -c --watch"
+  }
+}
