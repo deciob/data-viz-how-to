@@ -2,31 +2,21 @@ import '../../node_modules/normalize.css/normalize.css';
 import '../css/styles.css';
 import rlite from 'rlite-router';
 
+import './templates';
+
 const route = rlite(notFound, {
   // Default route
-  '': function () {
-    return 'Home';
+  '': function (params, state, url) {
+    window.location.hash = 'intro';
   },
 
-  // #inbox
-  'inbox': function () {
-    return 'Inbox';
+  'intro': function (params, state, url) {
+    document.body.innerHTML = templates.intro;
   },
 
-  // #sent?to=john -> r.params.to will equal 'john'
-  'sent': function ({ to }) {
-    return 'Sent to ' + to;
-  },
-
-  // #users/chris -> r.params.name will equal 'chris'
-  'users/:name': function ({ name }) {
-    return 'User ' + name;
-  },
-
-  // #logout
-  'logout': function () {
-    return 'Logout';
-  },
+  'lua/:vizType/:version': function (params, state, url) {
+    // Do interesting stuff here...
+  }
 });
 
 function notFound () {

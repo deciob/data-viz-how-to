@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "About creating good data visualizations",
   "main": "main.js",
-  "repository": "https://example.com/your-username/my-new-project",
+  "repository": "https://github.com/deciob/data-viz-how-to.git",
   "author": "Decio Battaglia <decio.battaglia@gmail.com>",
   "license": "MIT",
   "dependencies": {
