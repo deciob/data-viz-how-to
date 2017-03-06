@@ -1,34 +1,25 @@
 import '../../node_modules/normalize.css/normalize.css';
 import '../css/styles.css';
-import rlite from 'rlite-router';
+import page from 'page';
 
-const route = rlite(notFound, {
-  // Default route
-  '': function () {
-    return 'Home';
-  },
 
-  // #inbox
-  'inbox': function () {
-    return 'Inbox';
-  },
+page('/', index);
+page('/about', about);
+page('/contact', contact);
+page('/contact/:contactName', contact);
+page();
 
-  // #sent?to=john -> r.params.to will equal 'john'
-  'sent': function ({ to }) {
-    return 'Sent to ' + to;
-  },
+function index() {
+  document.querySelector('.main')
+    .textContent = 'viewing index';
+}
 
-  // #users/chris -> r.params.name will equal 'chris'
-  'users/:name': function ({ name }) {
-    return 'User ' + name;
-  },
+function about() {
+  document.querySelector('.main')
+    .textContent = 'viewing about';
+}
 
-  // #logout
-  'logout': function () {
-    return 'Logout';
-  },
-});
-
-function notFound () {
-  return '<h1>404 Not found :/</h1>';
+function contact(ctx) {
+  document.querySelector('.main')
+    .textContent = 'viewing contact ' + (ctx.params.contactName || '');
 }
