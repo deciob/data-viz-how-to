@@ -21,7 +21,8 @@ export default {
         'node_modules/**',
         'src/css/**',
       ],
-      presets: [ [ 'es2015', { modules: false } ], 'react' ],
+      // presets: [ [ 'es2015', { modules: false } ], 'react' ],
+      presets: [ 'react' ],
       plugins: [ 'external-helpers' ],
     }),
     commonjs({
