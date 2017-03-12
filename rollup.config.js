@@ -21,15 +21,25 @@ export default {
         'node_modules/**',
         'src/css/**',
       ],
-      // presets: [ [ 'es2015', { modules: false } ], 'react' ],
-      presets: [ 'react' ],
-      plugins: [ 'external-helpers' ],
+      presets: [ [ 'es2015', { modules: false } ], 'react' ],
+      // presets: [ 'react' ],
+      plugins: [
+        'external-helpers',
+        // 'react-html-attrs',
+        'syntax-object-rest-spread',
+        'transform-object-rest-spread',
+      ],
     }),
     commonjs({
       exclude: 'node_modules/process-es6/**',
       include: 'node_modules/**',
       namedExports: {
-        'node_modules/react/react.js': ['PropTypes', 'createElement'],
+        'node_modules/react/react.js': [
+          'PropTypes',
+          'createElement',
+          'Children',
+          'Component',
+        ],
       },
     }),
     nodeResolve({
