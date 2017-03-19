@@ -2609,6 +2609,10 @@ uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
 
+uniloc@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/uniloc/-/uniloc-0.3.0.tgz#c461c765a2494570beb202bed2e67f7d7f57955a"
+
 union@~0.4.3:
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/union/-/union-0.4.6.tgz#198fbdaeba254e788b0efcb630bc11f24a2959e0"
