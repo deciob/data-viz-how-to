@@ -11,8 +11,11 @@ const Header = ({ header }) => (
 );
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  tagline: PropTypes.string.isRequired,
+  header:
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      tagline: PropTypes.string.isRequired,
+    }),
 };
 
 export default Header;

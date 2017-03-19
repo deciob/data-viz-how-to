@@ -1,28 +1,26 @@
 /* eslint-disable no-unused-vars */
 import React, { PropTypes } from 'react';
-/* eslint-enable no-unused-vars */
 import { connect } from 'react-redux';
 import Header from './Header';
-import Navigation from './Navigation';
+/* eslint-enable no-unused-vars */
 
-const Viz = ({ state }) => (
+const Viz = ({ header }) => (
   <div>
-    <Header header={state.header}></Header>
-    <Navigation></Navigation>
+    <Header header={header}></Header>
   </div>
 );
 
-// Viz.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   tagline: PropTypes.string.isRequired,
-// };
-function test (state) {
-  console.log(state);
-  return state;
-}
+const mapStateToProps = state => ({
+  header: state.header,
+});
+
+// see: https://spapas.github.io/2016/03/02/react-redux-tutorial/
+// const mapDispatchToProps = dispatch => bindActionCreators({
+//     loadBooks, loadAuthors
+// }, dispatch)
 
 const VizContainer = connect(
-  test
+  mapStateToProps
 )(Viz);
 
 export default VizContainer;
