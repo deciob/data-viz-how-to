@@ -4,11 +4,15 @@ import { connect } from 'react-redux';
 import Header from './Header';
 /* eslint-enable no-unused-vars */
 
-const Viz = ({ header }) => (
-  <div>
-    <Header header={header}></Header>
+function Viz ({id, version}) {
+  const headerContent = {
+    title: id,
+    tagline: version
+  }
+  return <div>
+    <Header header={headerContent}></Header>
   </div>
-);
+}
 
 const mapStateToProps = state => ({
   header: state.header,

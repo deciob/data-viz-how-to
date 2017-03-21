@@ -16,43 +16,35 @@ import Navigation from './components/Navigation';
 //   </div>
 // );
 
-function App ({ location }) {
-  console.log(location);
-  // const location = props.state.navigationReducer.location;
-  //
-  // console.log(location);
-  //
-  // switch (location.name) {
-  //   case 'root':
-  //     return <Intro/>;
-  //   case 'intro':
-  //     return <Intro/>;
-  //   case 'viz':
-  //     return <Viz {...props}
-  //     id={location.options.id}
-  //     version={location.options.version} />;
-  //
-  //   default:
-  //     return <div>Not Found</div>;
-  // }
+function App ({state, dispatch}) {
+  const location = state.navigationReducer.location;
+
+  switch (location.name) {
+    case 'root':
+      return <Intro/>;
+    case 'intro':
+      return <Intro/>;
+    case 'viz':
+      return <Viz
+      id={location.options.id}
+      version={location.options.version} />;
+
+    default:
+      return <div>Not Found</div>;
+  }
 }
 
-App.propTypes = {
-  //state: React.PropTypes.object.isRequired,
-  //dispatch: React.PropTypes.func.isRequired,
+const mapStateToProps = (state) => {
+  return {state: state};
 };
 
-const mapStateToProps = state => ({
-  location: state.location,
-});
+const mapDispatchToProps = (dispatch) => {
+  return {dispatch: dispatch};
+};
 
 const AppContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(App);
-
-// see: https://spapas.github.io/2016/03/02/react-redux-tutorial/
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//   loadBooks, loadAuthors
-// }, dispatch),
 
 export default AppContainer;
