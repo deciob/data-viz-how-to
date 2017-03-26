@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Routes from './Routes';
+import Routes from '../Routes';
 
 const Link = ({
   name,

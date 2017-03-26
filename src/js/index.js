@@ -11,15 +11,18 @@ import App from './App';
 import {SET_HEADER, navigationComplete} from './actions';
 /* eslint-enable no-unused-vars */
 
-const store = createStore(reducer);
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-store.dispatch({
-  type: SET_HEADER,
-  header: {
-    title: 'Hello!',
-    tagline: 'All is fine!',
-  },
-});
+// store.dispatch({
+//   type: SET_HEADER,
+//   header: {
+//     title: 'Hello!',
+//     tagline: 'All is fine!',
+//   },
+// });
 
 store.subscribe(function () {
   ReactDOM.render(

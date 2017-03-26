@@ -1,30 +1,27 @@
 /* eslint-disable no-unused-vars */
 import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
 import Header from './Header';
+import Chart from './Chart';
+import Narrative from './Narrative';
 /* eslint-enable no-unused-vars */
 
 function Viz ({id, version}) {
   const headerContent = {
     title: id,
-    tagline: version
-  }
+    tagline: version,
+  };
   return <div>
-    <Header header={headerContent}></Header>
-  </div>
+    <Header header={headerContent}/>
+    <section class="body">
+      <Chart id={id} version={version}/>
+      <Narrative id={id} version={version}/>
+    </section>
+  </div>;
 }
 
-const mapStateToProps = state => ({
-  header: state.header,
-});
+Viz.propTypes = {
+  id: PropTypes.string.isRequired,
+  version: PropTypes.string.isRequired,
+};
 
-// see: https://spapas.github.io/2016/03/02/react-redux-tutorial/
-// const mapDispatchToProps = dispatch => bindActionCreators({
-//     loadBooks, loadAuthors
-// }, dispatch)
-
-const VizContainer = connect(
-  mapStateToProps
-)(Viz);
-
-export default VizContainer;
+export default Viz;

@@ -7,17 +7,16 @@ import Intro from './components/Intro';
 import Navigation from './components/Navigation';
 /* eslint-enable no-unused-vars */
 
-// const App = () => (
-//   <div>
-//     <Route exact path="/" component={Intro}/>
-//     <Route path="/viz" component={Viz}/>
-//     <hr/>
-//     <Navigation/>
-//   </div>
-// );
+function App (props) {
+  return <div>
+    {selectChildContainer(props)}
+    <Navigation />
+  </div>;
+}
 
-function App ({state, dispatch}) {
-  const location = state.navigationReducer.location;
+const selectChildContainer = props => {
+  console.log(props);
+  const location = props.state.navigationReducer.location;
 
   switch (location.name) {
     case 'root':
@@ -26,13 +25,12 @@ function App ({state, dispatch}) {
       return <Intro/>;
     case 'viz':
       return <Viz
-      id={location.options.id}
-      version={location.options.version} />;
-
+        id={location.options.id}
+        version={location.options.version}/>;
     default:
-      return <div>Not Found</div>;
+      return 'Not Found';
   }
-}
+};
 
 const mapStateToProps = (state) => {
   return {state: state};
