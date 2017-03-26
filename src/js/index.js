@@ -27,7 +27,7 @@ const store = createStore(
 store.subscribe(function () {
   ReactDOM.render(
     <Provider store={store}>
-      <App />
+      <App/>
     </Provider>,
     document.getElementById('root')
   );

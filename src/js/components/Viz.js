@@ -12,7 +12,7 @@ function Viz ({id, version}) {
   };
   return <div>
     <Header header={headerContent}/>
-    <section class="body">
+    <section className="body">
       <Chart id={id} version={version}/>
       <Narrative id={id} version={version}/>
     </section>
