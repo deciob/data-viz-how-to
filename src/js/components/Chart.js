@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 /* eslint-enable no-unused-vars */
 
 function Chart ({id, version}) {
-  return <div>
+  return <div className="chart">
     My chart will go here!
   </div>;
 }

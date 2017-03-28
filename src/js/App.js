@@ -8,14 +8,13 @@ import Navigation from './components/Navigation';
 /* eslint-enable no-unused-vars */
 
 function App (props) {
-  return <div>
+  return <div className="grid">
     {selectChildContainer(props)}
-    <Navigation />
+    <Navigation/>
   </div>;
 }
 
 const selectChildContainer = props => {
-  console.log(props);
   const location = props.state.navigationReducer.location;
 
   switch (location.name) {

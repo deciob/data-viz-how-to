@@ -10,7 +10,7 @@ function Viz ({id, version}) {
     title: id,
     tagline: version,
   };
-  return <div>
+  return <div className="viz">
     <Header header={headerContent}/>
     <section className="body">
       <Chart id={id} version={version}/>

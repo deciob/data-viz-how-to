@@ -5,7 +5,7 @@ import Link from './Link';
 
 const Navigation = () => (
   <section className="navigation">
-    <div>
+    <div className="navigation-group">
       <Link name='intro'>Intro</Link>
       <Link name='viz' options={{id: 'viz1', version: 'a'}}>Viz 1a</Link>
       <Link name='viz' options={{id: 'viz1', version: 'b'}}>Viz 1b</Link>

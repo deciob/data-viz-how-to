@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 /* eslint-enable no-unused-vars */
 
 function Narrative ({id, version}) {
-  return <div>
+  return <div className="narrative">
     My narrative will go here!
   </div>;
 }
