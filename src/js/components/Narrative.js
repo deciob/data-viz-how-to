@@ -4,7 +4,7 @@ import React, { PropTypes } from 'react';
 
 function Narrative ({id, version}) {
   return <div className="narrative">
-    My narrative will go here!
+    My narrative will go here! And here and here and here...
   </div>;
 }
 

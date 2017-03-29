@@ -8,7 +8,7 @@ import Navigation from './components/Navigation';
 /* eslint-enable no-unused-vars */
 
 function App (props) {
-  return <div className="grid">
+  return <div className="app grid">
     {selectChildContainer(props)}
     <Navigation/>
   </div>;

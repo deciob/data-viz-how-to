@@ -3,14 +3,20 @@
   box-sizing: border-box;
 }
 
-html, body, body > div, .grid {
+html, body, body > div, .app {
   height: 100%;
 }
 
 .grid {
   display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.app {
   grid-template-columns: auto;
   grid-template-rows: 100px auto 100px;
+  margin: 0 15px;
 }
 
 .intro, .viz {
@@ -21,7 +27,6 @@ html, body, body > div, .grid {
 }
 
 .viz {
-  display: grid;
   grid-template-columns: auto;
   grid-template-rows: 100px auto;
 }
@@ -31,16 +36,15 @@ html, body, body > div, .grid {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  grid-row-end: 3;
 }
 
 .viz > .body {
-  display: grid;
   grid-template-columns: auto 200px;
   grid-template-rows: auto;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
-  grid-row-end: 3;
 }
 
 .chart {
@@ -48,6 +52,7 @@ html, body, body > div, .grid {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  background-color: #d9e3ec;
 }
 
 .narrative {
@@ -55,6 +60,7 @@ html, body, body > div, .grid {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
+  background-color: #d9e3ec;
 }
 
 .navigation {
