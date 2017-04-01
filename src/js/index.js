@@ -4,16 +4,30 @@ import '../css/styles.css';
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 import reducer from './reducer';
 import App from './App';
-import {SET_HEADER, navigationComplete} from './actions';
+import {SET_HEADER, navigationComplete, fetchData} from './actions';
 /* eslint-enable no-unused-vars */
+
+const loggerMiddleware = createLogger();
 
 const store = createStore(
   reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  compose(
+    applyMiddleware(
+      thunkMiddleware, // lets us dispatch() functions
+      loggerMiddleware, // neat middleware that logs actions
+    ),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  ),
+);
+
+store.dispatch(fetchData({})).then(() =>
+  console.log('xxx', store.getState())
 );
 
 // store.dispatch({
