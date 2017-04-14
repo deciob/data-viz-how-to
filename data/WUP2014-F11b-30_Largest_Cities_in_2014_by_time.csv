@@ -1,0 +1,511 @@
+year,country,urbanAgglomeration,population
+1950,Argentina,Buenos Aires,5.10
+1955,Argentina,Buenos Aires,5.80
+1960,Argentina,Buenos Aires,6.60
+1965,Argentina,Buenos Aires,7.32
+1970,Argentina,Buenos Aires,8.10
+1975,Argentina,Buenos Aires,8.74
+1980,Argentina,Buenos Aires,9.42
+1985,Argentina,Buenos Aires,9.96
+1990,Argentina,Buenos Aires,10.51
+1995,Argentina,Buenos Aires,11.39
+2000,Argentina,Buenos Aires,12.41
+2005,Argentina,Buenos Aires,13.33
+2010,Argentina,Buenos Aires,14.25
+2015,Argentina,Buenos Aires,15.18
+2020,Argentina,Buenos Aires,15.89
+2025,Argentina,Buenos Aires,16.48
+2030,Argentina,Buenos Aires,16.96
+1950,Bangladesh,Dhaka,0.34
+1955,Bangladesh,Dhaka,0.41
+1960,Bangladesh,Dhaka,0.51
+1965,Bangladesh,Dhaka,0.82
+1970,Bangladesh,Dhaka,1.37
+1975,Bangladesh,Dhaka,2.22
+1980,Bangladesh,Dhaka,3.27
+1985,Bangladesh,Dhaka,4.66
+1990,Bangladesh,Dhaka,6.62
+1995,Bangladesh,Dhaka,8.33
+2000,Bangladesh,Dhaka,10.28
+2005,Bangladesh,Dhaka,12.33
+2010,Bangladesh,Dhaka,14.73
+2015,Bangladesh,Dhaka,17.60
+2020,Bangladesh,Dhaka,20.99
+2025,Bangladesh,Dhaka,24.33
+2030,Bangladesh,Dhaka,27.37
+1950,Brazil,Rio de Janeiro,3.03
+1955,Brazil,Rio de Janeiro,3.69
+1960,Brazil,Rio de Janeiro,4.49
+1965,Brazil,Rio de Janeiro,5.52
+1970,Brazil,Rio de Janeiro,6.79
+1975,Brazil,Rio de Janeiro,7.73
+1980,Brazil,Rio de Janeiro,8.78
+1985,Brazil,Rio de Janeiro,9.24
+1990,Brazil,Rio de Janeiro,9.70
+1995,Brazil,Rio de Janeiro,10.43
+2000,Brazil,Rio de Janeiro,11.31
+2005,Brazil,Rio de Janeiro,11.83
+2010,Brazil,Rio de Janeiro,12.37
+2015,Brazil,Rio de Janeiro,12.90
+2020,Brazil,Rio de Janeiro,13.33
+2025,Brazil,Rio de Janeiro,13.79
+2030,Brazil,Rio de Janeiro,14.17
+1950,Brazil,São Paulo,2.33
+1955,Brazil,São Paulo,3.04
+1960,Brazil,São Paulo,3.97
+1965,Brazil,São Paulo,5.49
+1970,Brazil,São Paulo,7.62
+1975,Brazil,São Paulo,9.61
+1980,Brazil,São Paulo,12.09
+1985,Brazil,São Paulo,13.39
+1990,Brazil,São Paulo,14.78
+1995,Brazil,São Paulo,15.91
+2000,Brazil,São Paulo,17.01
+2005,Brazil,São Paulo,18.29
+2010,Brazil,São Paulo,19.66
+2015,Brazil,São Paulo,21.07
+2020,Brazil,São Paulo,22.12
+2025,Brazil,São Paulo,22.90
+2030,Brazil,São Paulo,23.44
+1950,China,Beijing,1.67
+1955,China,Beijing,2.36
+1960,China,Beijing,3.90
+1965,China,Beijing,4.58
+1970,China,Beijing,4.43
+1975,China,Beijing,4.83
+1980,China,Beijing,5.37
+1985,China,Beijing,6.02
+1990,China,Beijing,6.79
+1995,China,Beijing,8.31
+2000,China,Beijing,10.16
+2005,China,Beijing,12.81
+2010,China,Beijing,16.19
+2015,China,Beijing,20.38
+2020,China,Beijing,24.20
+2025,China,Beijing,26.49
+2030,China,Beijing,27.71
+1950,China,Chongqing,1.57
+1955,China,Chongqing,1.91
+1960,China,Chongqing,2.28
+1965,China,Chongqing,2.19
+1970,China,Chongqing,2.24
+1975,China,Chongqing,2.54
+1980,China,Chongqing,2.96
+1985,China,Chongqing,3.45
+1990,China,Chongqing,4.01
+1995,China,Chongqing,5.62
+2000,China,Chongqing,7.86
+2005,China,Chongqing,9.45
+2010,China,Chongqing,11.24
+2015,China,Chongqing,13.33
+2020,China,Chongqing,15.23
+2025,China,Chongqing,16.57
+2030,China,Chongqing,17.38
+1950,China,"Guangzhou, Guangdong",1.05
+1955,China,"Guangzhou, Guangdong",1.16
+1960,China,"Guangzhou, Guangdong",1.27
+1965,China,"Guangzhou, Guangdong",1.40
+1970,China,"Guangzhou, Guangdong",1.54
+1975,China,"Guangzhou, Guangdong",1.70
+1980,China,"Guangzhou, Guangdong",1.87
+1985,China,"Guangzhou, Guangdong",2.31
+1990,China,"Guangzhou, Guangdong",3.07
+1995,China,"Guangzhou, Guangdong",4.74
+2000,China,"Guangzhou, Guangdong",7.33
+2005,China,"Guangzhou, Guangdong",8.49
+2010,China,"Guangzhou, Guangdong",9.62
+2015,China,"Guangzhou, Guangdong",12.46
+2020,China,"Guangzhou, Guangdong",15.17
+2025,China,"Guangzhou, Guangdong",16.74
+2030,China,"Guangzhou, Guangdong",17.57
+1950,China,Shanghai,4.30
+1955,China,Shanghai,5.85
+1960,China,Shanghai,6.82
+1965,China,Shanghai,6.43
+1970,China,Shanghai,6.04
+1975,China,Shanghai,5.63
+1980,China,Shanghai,5.97
+1985,China,Shanghai,6.85
+1990,China,Shanghai,7.82
+1995,China,Shanghai,10.45
+2000,China,Shanghai,13.96
+2005,China,Shanghai,16.76
+2010,China,Shanghai,19.98
+2015,China,Shanghai,23.74
+2020,China,Shanghai,27.14
+2025,China,Shanghai,29.44
+2030,China,Shanghai,30.75
+1950,China,Shenzhen,0.00
+1955,China,Shenzhen,0.01
+1960,China,Shenzhen,0.01
+1965,China,Shenzhen,0.01
+1970,China,Shenzhen,0.02
+1975,China,Shenzhen,0.04
+1980,China,Shenzhen,0.06
+1985,China,Shenzhen,0.17
+1990,China,Shenzhen,0.88
+1995,China,Shenzhen,2.39
+2000,China,Shenzhen,6.55
+2005,China,Shenzhen,8.41
+2010,China,Shenzhen,10.22
+2015,China,Shenzhen,10.75
+2020,China,Shenzhen,11.29
+2025,China,Shenzhen,12.07
+2030,China,Shenzhen,12.67
+1950,China,Tianjin,2.47
+1955,China,Tianjin,2.76
+1960,China,Tianjin,2.94
+1965,China,Tianjin,3.12
+1970,China,Tianjin,3.32
+1975,China,Tianjin,3.53
+1980,China,Tianjin,3.75
+1985,China,Tianjin,4.10
+1990,China,Tianjin,4.56
+1995,China,Tianjin,5.51
+2000,China,Tianjin,6.67
+2005,China,Tianjin,7.94
+2010,China,Tianjin,9.45
+2015,China,Tianjin,11.21
+2020,China,Tianjin,12.82
+2025,China,Tianjin,13.96
+2030,China,Tianjin,14.66
+1950,Democratic Republic of the Congo,Kinshasa,0.20
+1955,Democratic Republic of the Congo,Kinshasa,0.29
+1960,Democratic Republic of the Congo,Kinshasa,0.44
+1965,Democratic Republic of the Congo,Kinshasa,0.72
+1970,Democratic Republic of the Congo,Kinshasa,1.07
+1975,Democratic Republic of the Congo,Kinshasa,1.48
+1980,Democratic Republic of the Congo,Kinshasa,2.05
+1985,Democratic Republic of the Congo,Kinshasa,2.81
+1990,Democratic Republic of the Congo,Kinshasa,3.68
+1995,Democratic Republic of the Congo,Kinshasa,4.82
+2000,Democratic Republic of the Congo,Kinshasa,6.14
+2005,Democratic Republic of the Congo,Kinshasa,7.59
+2010,Democratic Republic of the Congo,Kinshasa,9.38
+2015,Democratic Republic of the Congo,Kinshasa,11.59
+2020,Democratic Republic of the Congo,Kinshasa,14.12
+2025,Democratic Republic of the Congo,Kinshasa,16.92
+2030,Democratic Republic of the Congo,Kinshasa,20.00
+1950,Egypt,Al-Qahirah (Cairo),2.49
+1955,Egypt,Al-Qahirah (Cairo),3.03
+1960,Egypt,Al-Qahirah (Cairo),3.68
+1965,Egypt,Al-Qahirah (Cairo),4.74
+1970,Egypt,Al-Qahirah (Cairo),5.58
+1975,Egypt,Al-Qahirah (Cairo),6.45
+1980,Egypt,Al-Qahirah (Cairo),7.35
+1985,Egypt,Al-Qahirah (Cairo),8.33
+1990,Egypt,Al-Qahirah (Cairo),9.89
+1995,Egypt,Al-Qahirah (Cairo),11.96
+2000,Egypt,Al-Qahirah (Cairo),13.63
+2005,Egypt,Al-Qahirah (Cairo),15.17
+2010,Egypt,Al-Qahirah (Cairo),16.90
+2015,Egypt,Al-Qahirah (Cairo),18.77
+2020,Egypt,Al-Qahirah (Cairo),20.57
+2025,Egypt,Al-Qahirah (Cairo),22.43
+2030,Egypt,Al-Qahirah (Cairo),24.50
+1950,France,Paris,6.28
+1955,France,Paris,6.80
+1960,France,Paris,7.41
+1965,France,Paris,7.86
+1970,France,Paris,8.21
+1975,France,Paris,8.56
+1980,France,Paris,8.67
+1985,France,Paris,8.96
+1990,France,Paris,9.33
+1995,France,Paris,9.51
+2000,France,Paris,9.74
+2005,France,Paris,10.09
+2010,France,Paris,10.46
+2015,France,Paris,10.84
+2020,France,Paris,11.27
+2025,France,Paris,11.57
+2030,France,Paris,11.80
+1950,India,Delhi,1.37
+1955,India,Delhi,1.78
+1960,India,Delhi,2.28
+1965,India,Delhi,2.85
+1970,India,Delhi,3.53
+1975,India,Delhi,4.43
+1980,India,Delhi,5.56
+1985,India,Delhi,7.33
+1990,India,Delhi,9.73
+1995,India,Delhi,12.41
+2000,India,Delhi,15.73
+2005,India,Delhi,18.67
+2010,India,Delhi,21.94
+2015,India,Delhi,25.70
+2020,India,Delhi,29.35
+2025,India,Delhi,32.73
+2030,India,Delhi,36.06
+1950,India,Kolkata (Calcutta),4.51
+1955,India,Kolkata (Calcutta),5.06
+1960,India,Kolkata (Calcutta),5.65
+1965,India,Kolkata (Calcutta),6.26
+1970,India,Kolkata (Calcutta),6.93
+1975,India,Kolkata (Calcutta),7.89
+1980,India,Kolkata (Calcutta),9.03
+1985,India,Kolkata (Calcutta),9.95
+1990,India,Kolkata (Calcutta),10.89
+1995,India,Kolkata (Calcutta),11.92
+2000,India,Kolkata (Calcutta),13.06
+2005,India,Kolkata (Calcutta),13.70
+2010,India,Kolkata (Calcutta),14.28
+2015,India,Kolkata (Calcutta),14.86
+2020,India,Kolkata (Calcutta),15.73
+2025,India,Kolkata (Calcutta),17.28
+2030,India,Kolkata (Calcutta),19.09
+1950,India,Mumbai (Bombay),2.86
+1955,India,Mumbai (Bombay),3.43
+1960,India,Mumbai (Bombay),4.06
+1965,India,Mumbai (Bombay),4.85
+1970,India,Mumbai (Bombay),5.81
+1975,India,Mumbai (Bombay),7.08
+1980,India,Mumbai (Bombay),8.66
+1985,India,Mumbai (Bombay),10.39
+1990,India,Mumbai (Bombay),12.44
+1995,India,Mumbai (Bombay),14.31
+2000,India,Mumbai (Bombay),16.37
+2005,India,Mumbai (Bombay),17.89
+2010,India,Mumbai (Bombay),19.42
+2015,India,Mumbai (Bombay),21.04
+2020,India,Mumbai (Bombay),22.84
+2025,India,Mumbai (Bombay),25.21
+2030,India,Mumbai (Bombay),27.80
+1950,Indonesia,Jakarta,1.45
+1955,Indonesia,Jakarta,1.97
+1960,Indonesia,Jakarta,2.68
+1965,Indonesia,Jakarta,3.30
+1970,Indonesia,Jakarta,3.92
+1975,Indonesia,Jakarta,4.81
+1980,Indonesia,Jakarta,5.98
+1985,Indonesia,Jakarta,7.01
+1990,Indonesia,Jakarta,8.18
+1995,Indonesia,Jakarta,8.32
+2000,Indonesia,Jakarta,8.39
+2005,Indonesia,Jakarta,8.99
+2010,Indonesia,Jakarta,9.63
+2015,Indonesia,Jakarta,10.32
+2020,Indonesia,Jakarta,11.30
+2025,Indonesia,Jakarta,12.59
+2030,Indonesia,Jakarta,13.81
+1950,Japan,Kinki M.M.A. (Osaka),7.01
+1955,Japan,Kinki M.M.A. (Osaka),8.62
+1960,Japan,Kinki M.M.A. (Osaka),10.61
+1965,Japan,Kinki M.M.A. (Osaka),13.07
+1970,Japan,Kinki M.M.A. (Osaka),15.27
+1975,Japan,Kinki M.M.A. (Osaka),16.30
+1980,Japan,Kinki M.M.A. (Osaka),17.03
+1985,Japan,Kinki M.M.A. (Osaka),17.58
+1990,Japan,Kinki M.M.A. (Osaka),18.39
+1995,Japan,Kinki M.M.A. (Osaka),18.94
+2000,Japan,Kinki M.M.A. (Osaka),18.66
+2005,Japan,Kinki M.M.A. (Osaka),18.76
+2010,Japan,Kinki M.M.A. (Osaka),19.49
+2015,Japan,Kinki M.M.A. (Osaka),20.24
+2020,Japan,Kinki M.M.A. (Osaka),20.52
+2025,Japan,Kinki M.M.A. (Osaka),20.35
+2030,Japan,Kinki M.M.A. (Osaka),19.98
+1950,Japan,Tokyo,11.27
+1955,Japan,Tokyo,13.71
+1960,Japan,Tokyo,16.68
+1965,Japan,Tokyo,20.28
+1970,Japan,Tokyo,23.30
+1975,Japan,Tokyo,26.61
+1980,Japan,Tokyo,28.55
+1985,Japan,Tokyo,30.30
+1990,Japan,Tokyo,32.53
+1995,Japan,Tokyo,33.59
+2000,Japan,Tokyo,34.45
+2005,Japan,Tokyo,35.62
+2010,Japan,Tokyo,36.83
+2015,Japan,Tokyo,38.00
+2020,Japan,Tokyo,38.32
+2025,Japan,Tokyo,37.88
+2030,Japan,Tokyo,37.19
+1950,Mexico,Ciudad de México (Mexico City),3.37
+1955,Mexico,Ciudad de México (Mexico City),4.29
+1960,Mexico,Ciudad de México (Mexico City),5.48
+1965,Mexico,Ciudad de México (Mexico City),6.97
+1970,Mexico,Ciudad de México (Mexico City),8.83
+1975,Mexico,Ciudad de México (Mexico City),10.73
+1980,Mexico,Ciudad de México (Mexico City),13.03
+1985,Mexico,Ciudad de México (Mexico City),14.28
+1990,Mexico,Ciudad de México (Mexico City),15.64
+1995,Mexico,Ciudad de México (Mexico City),17.02
+2000,Mexico,Ciudad de México (Mexico City),18.46
+2005,Mexico,Ciudad de México (Mexico City),19.28
+2010,Mexico,Ciudad de México (Mexico City),20.13
+2015,Mexico,Ciudad de México (Mexico City),21.00
+2020,Mexico,Ciudad de México (Mexico City),21.87
+2025,Mexico,Ciudad de México (Mexico City),22.92
+2030,Mexico,Ciudad de México (Mexico City),23.86
+1950,Nigeria,Lagos,0.33
+1955,Nigeria,Lagos,0.47
+1960,Nigeria,Lagos,0.76
+1965,Nigeria,Lagos,1.14
+1970,Nigeria,Lagos,1.41
+1975,Nigeria,Lagos,1.89
+1980,Nigeria,Lagos,2.57
+1985,Nigeria,Lagos,3.50
+1990,Nigeria,Lagos,4.76
+1995,Nigeria,Lagos,5.98
+2000,Nigeria,Lagos,7.28
+2005,Nigeria,Lagos,8.86
+2010,Nigeria,Lagos,10.78
+2015,Nigeria,Lagos,13.12
+2020,Nigeria,Lagos,16.17
+2025,Nigeria,Lagos,20.03
+2030,Nigeria,Lagos,24.24
+1950,Pakistan,Karachi,1.06
+1955,Pakistan,Karachi,1.42
+1960,Pakistan,Karachi,1.85
+1965,Pakistan,Karachi,2.41
+1970,Pakistan,Karachi,3.12
+1975,Pakistan,Karachi,3.99
+1980,Pakistan,Karachi,5.05
+1985,Pakistan,Karachi,6.03
+1990,Pakistan,Karachi,7.15
+1995,Pakistan,Karachi,8.47
+2000,Pakistan,Karachi,10.03
+2005,Pakistan,Karachi,11.89
+2010,Pakistan,Karachi,14.08
+2015,Pakistan,Karachi,16.62
+2020,Pakistan,Karachi,19.23
+2025,Pakistan,Karachi,22.01
+2030,Pakistan,Karachi,24.84
+1950,Peru,Lima,1.07
+1955,Peru,Lima,1.37
+1960,Peru,Lima,1.76
+1965,Peru,Lima,2.28
+1970,Peru,Lima,2.98
+1975,Peru,Lima,3.70
+1980,Peru,Lima,4.44
+1985,Peru,Lima,5.12
+1990,Peru,Lima,5.84
+1995,Peru,Lima,6.58
+2000,Peru,Lima,7.29
+2005,Peru,Lima,8.08
+2010,Peru,Lima,8.96
+2015,Peru,Lima,9.90
+2020,Peru,Lima,10.76
+2025,Peru,Lima,11.53
+2030,Peru,Lima,12.22
+1950,Philippines,Manila,1.54
+1955,Philippines,Manila,1.87
+1960,Philippines,Manila,2.27
+1965,Philippines,Manila,2.83
+1970,Philippines,Manila,3.53
+1975,Philippines,Manila,5.00
+1980,Philippines,Manila,5.95
+1985,Philippines,Manila,6.89
+1990,Philippines,Manila,7.97
+1995,Philippines,Manila,9.40
+2000,Philippines,Manila,9.96
+2005,Philippines,Manila,10.88
+2010,Philippines,Manila,11.89
+2015,Philippines,Manila,12.95
+2020,Philippines,Manila,13.94
+2025,Philippines,Manila,15.20
+2030,Philippines,Manila,16.76
+1950,Republic of Korea,Seoul,1.02
+1955,Republic of Korea,Seoul,1.55
+1960,Republic of Korea,Seoul,2.36
+1965,Republic of Korea,Seoul,3.45
+1970,Republic of Korea,Seoul,5.31
+1975,Republic of Korea,Seoul,6.81
+1980,Republic of Korea,Seoul,8.26
+1985,Republic of Korea,Seoul,9.33
+1990,Republic of Korea,Seoul,10.52
+1995,Republic of Korea,Seoul,10.25
+2000,Republic of Korea,Seoul,9.88
+2005,Republic of Korea,Seoul,9.82
+2010,Republic of Korea,Seoul,9.80
+2015,Republic of Korea,Seoul,9.77
+2020,Republic of Korea,Seoul,9.82
+2025,Republic of Korea,Seoul,9.90
+2030,Republic of Korea,Seoul,9.96
+1950,Russian Federation,Moskva (Moscow),5.36
+1955,Russian Federation,Moskva (Moscow),5.75
+1960,Russian Federation,Moskva (Moscow),6.17
+1965,Russian Federation,Moskva (Moscow),6.62
+1970,Russian Federation,Moskva (Moscow),7.11
+1975,Russian Federation,Moskva (Moscow),7.62
+1980,Russian Federation,Moskva (Moscow),8.14
+1985,Russian Federation,Moskva (Moscow),8.58
+1990,Russian Federation,Moskva (Moscow),8.99
+1995,Russian Federation,Moskva (Moscow),9.20
+2000,Russian Federation,Moskva (Moscow),10.00
+2005,Russian Federation,Moskva (Moscow),10.75
+2010,Russian Federation,Moskva (Moscow),11.46
+2015,Russian Federation,Moskva (Moscow),12.17
+2020,Russian Federation,Moskva (Moscow),12.47
+2025,Russian Federation,Moskva (Moscow),12.38
+2030,Russian Federation,Moskva (Moscow),12.20
+1950,Turkey,Istanbul,0.97
+1955,Turkey,Istanbul,1.25
+1960,Turkey,Istanbul,1.45
+1965,Turkey,Istanbul,2.00
+1970,Turkey,Istanbul,2.77
+1975,Turkey,Istanbul,3.60
+1980,Turkey,Istanbul,4.40
+1985,Turkey,Istanbul,5.41
+1990,Turkey,Istanbul,6.55
+1995,Turkey,Istanbul,7.67
+2000,Turkey,Istanbul,8.74
+2005,Turkey,Istanbul,10.51
+2010,Turkey,Istanbul,12.70
+2015,Turkey,Istanbul,14.16
+2020,Turkey,Istanbul,15.10
+2025,Turkey,Istanbul,15.96
+2030,Turkey,Istanbul,16.69
+1950,United Kingdom,London,8.36
+1955,United Kingdom,London,8.28
+1960,United Kingdom,London,8.20
+1965,United Kingdom,London,7.87
+1970,United Kingdom,London,7.51
+1975,United Kingdom,London,7.55
+1980,United Kingdom,London,7.66
+1985,United Kingdom,London,7.85
+1990,United Kingdom,London,8.05
+1995,United Kingdom,London,8.32
+2000,United Kingdom,London,8.61
+2005,United Kingdom,London,9.12
+2010,United Kingdom,London,9.70
+2015,United Kingdom,London,10.31
+2020,United Kingdom,London,10.85
+2025,United Kingdom,London,11.21
+2030,United Kingdom,London,11.47
+1950,United States of America,Los Angeles-Long Beach-Santa Ana,4.05
+1955,United States of America,Los Angeles-Long Beach-Santa Ana,5.15
+1960,United States of America,Los Angeles-Long Beach-Santa Ana,6.53
+1965,United States of America,Los Angeles-Long Beach-Santa Ana,7.41
+1970,United States of America,Los Angeles-Long Beach-Santa Ana,8.38
+1975,United States of America,Los Angeles-Long Beach-Santa Ana,8.93
+1980,United States of America,Los Angeles-Long Beach-Santa Ana,9.51
+1985,United States of America,Los Angeles-Long Beach-Santa Ana,10.18
+1990,United States of America,Los Angeles-Long Beach-Santa Ana,10.88
+1995,United States of America,Los Angeles-Long Beach-Santa Ana,11.34
+2000,United States of America,Los Angeles-Long Beach-Santa Ana,11.80
+2005,United States of America,Los Angeles-Long Beach-Santa Ana,11.98
+2010,United States of America,Los Angeles-Long Beach-Santa Ana,12.16
+2015,United States of America,Los Angeles-Long Beach-Santa Ana,12.31
+2020,United States of America,Los Angeles-Long Beach-Santa Ana,12.45
+2025,United States of America,Los Angeles-Long Beach-Santa Ana,12.83
+2030,United States of America,Los Angeles-Long Beach-Santa Ana,13.26
+1950,United States of America,New York-Newark,12.34
+1955,United States of America,New York-Newark,13.22
+1960,United States of America,New York-Newark,14.16
+1965,United States of America,New York-Newark,15.18
+1970,United States of America,New York-Newark,16.19
+1975,United States of America,New York-Newark,15.88
+1980,United States of America,New York-Newark,15.60
+1985,United States of America,New York-Newark,15.83
+1990,United States of America,New York-Newark,16.09
+1995,United States of America,New York-Newark,16.94
+2000,United States of America,New York-Newark,17.81
+2005,United States of America,New York-Newark,18.09
+2010,United States of America,New York-Newark,18.37
+2015,United States of America,New York-Newark,18.59
+2020,United States of America,New York-Newark,18.79
+2025,United States of America,New York-Newark,19.31
+2030,United States of America,New York-Newark,19.89
