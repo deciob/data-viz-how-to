@@ -1,3 +1,4 @@
+import configuration from './configuration';
 import Routes from './Routes';
 
 const NAVIGATION_COMPLETE = 'NAVIGATION_COMPLETE';
@@ -44,7 +45,9 @@ function fetchData (params) {
   return dispatch => {
     dispatch(requestData(params));
 
-    return window.fetch('../../data/WUP2014-F11b-30_Largest_Cities_in_2014_by_time.csv')
+    const url = configuration.urls[params.id];
+
+    return window.fetch(url)
       .then(response => response.text())
       .then(text => dispatch(receiveData(params, text))
     );

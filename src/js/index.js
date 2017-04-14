@@ -26,7 +26,7 @@ const store = createStore(
   ),
 );
 
-store.dispatch(fetchData({dataset: 'a'}));
+store.dispatch(fetchData({id: 'viz1'}));
 // .then(() =>
 //   console.log('xxx', store.getState())
 // );
