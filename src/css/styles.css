@@ -10,7 +10,7 @@ html, body, body > div, .app {
 .grid {
   display: grid;
   grid-column-gap: 15px;
-  grid-row-gap: 15px;
+  grid-row-gap: 0;
 }
 
 .app {
@@ -40,7 +40,7 @@ html, body, body > div, .app {
 }
 
 .viz > .body {
-  grid-template-columns: auto 200px;
+  grid-template-columns: auto 300px;
   grid-template-rows: auto;
   grid-column-start: 1;
   grid-column-end: 2;

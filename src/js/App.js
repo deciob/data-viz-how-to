@@ -23,7 +23,7 @@ const selectChildContainer = props => {
     case 'intro':
       return <Intro/>;
     case 'viz':
-      return <Viz/>;
+      return <Viz options={location.options}/>;
     default:
       return 'Not Found';
   }

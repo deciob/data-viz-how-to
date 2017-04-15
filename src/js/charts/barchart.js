@@ -1,4 +1,4 @@
-export default function (init, config, data) {
+export default function (config, data) {
   const margin = config.margin || {top: 20, right: 30, bottom: 30, left: 220};
   const leftPadding = 5;
   const width = config.width - margin.left - margin.right;
@@ -25,11 +25,16 @@ export default function (init, config, data) {
       .padding(0.1);
 
   const initSvg = function () {
-    return d3.select('.chart').append('svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-      .attr('transform', `translate(${margin.left},${margin.top})`);
+    let chart = d3.select('.chart');
+    let svg = chart.select('svg');
+    if (svg.empty()) {
+      return chart.append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+      .append('g')
+        .attr('transform', `translate(${margin.left},${margin.top})`);
+    }
+    return svg;
   };
 
   const drawXAxis = function (el, t) {
@@ -84,13 +89,8 @@ export default function (init, config, data) {
         .delay(delay);
   };
 
-  if (init) {
-    svg = initSvg();
-    drawXAxis(svg, 50);
-  } else {
-    svg = d3.select('svg');
-  }
-
+  svg = initSvg();
+  drawXAxis(svg, 50);
   drawYAxis(svg, 50);
   drawBars(svg, data, 50);
 }
