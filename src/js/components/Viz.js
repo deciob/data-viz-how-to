@@ -5,23 +5,14 @@ import Chart from './Chart';
 import Narrative from './Narrative';
 /* eslint-enable no-unused-vars */
 
-function Viz ({id, version}) {
-  const headerContent = {
-    title: id,
-    tagline: version,
-  };
+function Viz () {
   return <div className="viz grid">
-    <Header header={headerContent}/>
+    <Header/>
     <section className="body grid">
-      <Chart id={id} version={version}/>
-      <Narrative id={id} version={version}/>
+      <Chart/>
+      <Narrative/>
     </section>
   </div>;
 }
-
-Viz.propTypes = {
-  id: PropTypes.string.isRequired,
-  version: PropTypes.string.isRequired,
-};
 
 export default Viz;

@@ -31,8 +31,9 @@ function navigationReducer (state = {
 }
 
 function appReducer (state = {
-  isFetching: false,
+  currentYear: 1950,
   data: {},
+  isFetching: false,
 }, action) {
   switch (action.type) {
     case SET_HEADER:
@@ -49,7 +50,7 @@ function appReducer (state = {
         data: Object.assign(
           {},
           state.data,
-          {[action.params.dataset]: d3.csvParse(action.data, dataFormatter)}
+          {[action.params.id]: d3.csvParse(action.data, dataFormatter)}
         ),
       });
 

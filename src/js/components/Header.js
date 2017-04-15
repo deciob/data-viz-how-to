@@ -1,21 +1,34 @@
 /* eslint-disable no-unused-vars */
 import React, { PropTypes } from 'react';
+import { createStore } from 'redux';
 import { connect } from 'react-redux';
 /* eslint-enable no-unused-vars */
 
-const Header = ({ header }) => (
+const Header = ({ id, version }) => (
   <section className="header">
-    <h1>{header.title}</h1>
-    <h3>{header.tagline}</h3>
+    <h1>{id}</h1>
+    <h3>{version}</h3>
   </section>
 );
 
 Header.propTypes = {
   header:
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      tagline: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      version: PropTypes.string.isRequired,
     }),
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  const location = state.navigationReducer.location;
+  return {
+    id: location.options.id,
+    version: location.options.version,
+  };
+};
+
+const HeaderContainer = connect(
+  mapStateToProps,
+)(Header);
+
+export default HeaderContainer;

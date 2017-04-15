@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 /* eslint-enable no-unused-vars */
 
 function Narrative ({id, version}) {
@@ -13,4 +14,16 @@ Narrative.propTypes = {
   version: PropTypes.string.isRequired,
 };
 
-export default Narrative;
+const mapStateToProps = (state) => {
+  const location = state.navigationReducer.location;
+  return {
+    id: location.options.id,
+    version: location.options.version,
+  };
+};
+
+const NarrativeContainer = connect(
+  mapStateToProps,
+)(Narrative);
+
+export default NarrativeContainer;
