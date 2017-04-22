@@ -2,42 +2,31 @@
 import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import barchart from '../../charts/barchart';
+import linechart from '../../charts/linechart';
 /* eslint-enable no-unused-vars */
 
-class Top30Bars extends React.Component {
+class Top30Lines extends React.Component {
 
   prepareArgs () {
     const element = ReactDOM.findDOMNode(this);
-    const allData = this.props.data[this.props.id] || [];
+    const allData = (this.props.data[this.props.id] || []);
     const config = {
       width: element.clientWidth,
       height: element.clientHeight,
-      xAccessor: d => d.population,
-      yAccessor: d => d.urbanAgglomeration,
-      delayBaseline: 40,
+      xAccessor: d => d.year,
+      yAccessor: d => d.population,
     };
-    if (this.props.currentYear) {
-      let data = allData
-        .filter(d => d.year === this.props.currentYear)
-        .sort((a, b) => b.population - a.population);
-      return [config, data];
-    }
-    return [];
+    return [config, allData];
   }
 
   componentDidMount () {
-    if (this.props.currentYear) {
-      let args = this.prepareArgs(true);
-      barchart.apply(null, args);
-    }
+    let args = this.prepareArgs(true);
+    linechart.apply(null, args);
   }
 
   componentDidUpdate () {
-    if (this.props.currentYear) {
-      let args = this.prepareArgs();
-      barchart.apply(null, args);
-    }
+    let args = this.prepareArgs();
+    linechart.apply(null, args);
   }
 
   componentWillUnmount () {
@@ -50,18 +39,16 @@ class Top30Bars extends React.Component {
   }
 }
 
-Top30Bars.propTypes = {
+Top30Lines.propTypes = {
   id: PropTypes.string.isRequired,
   version: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  currentYear: PropTypes.number.isRequired,
 };
 
 const mapStateToProps = (state) => {
   const location = state.navigationReducer.location;
   return {
     data: state.appReducer.data,
-    currentYear: state.appReducer.currentYear,
     id: location.options.id,
     version: location.options.version,
   };
@@ -69,6 +56,6 @@ const mapStateToProps = (state) => {
 
 const ChartContainer = connect(
   mapStateToProps,
-)(Top30Bars);
+)(Top30Lines);
 
 export default ChartContainer;
