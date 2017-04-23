@@ -1,6 +1,5 @@
-export default function (config, data) {
+export default function (config, data, flatData) {
   const margin = config.margin || {top: 20, right: 30, bottom: 30, left: 40};
-  const leftPadding = 5;
   const width = config.width - margin.left - margin.right;
   const height = config.height - margin.top - margin.bottom;
   const xFormat = config.xFormat || d3.format('');
@@ -8,18 +7,17 @@ export default function (config, data) {
 
   const xAccessor = config.xAccessor || (d => d.x);
   const yAccessor = config.yAccessor || (d => d.y);
-  const xMax = d3.max(data, xAccessor) || 0;
-  const yMax = d3.max(data, yAccessor) || 0;
-
-  console.log(xMax, yMax, data);
+  const xMax = d3.max(flatData, xAccessor) || 0;
+  const xMin = d3.min(flatData, xAccessor) || 0;
+  const yMax = d3.max(flatData, yAccessor) || 0;
 
   const xScale = d3.scaleLinear()
-      .range([0, width])
-      .domain([0, xMax]);
+      .domain([xMin, xMax])
+      .range([0, width]);
 
   const yScale = d3.scaleLinear()
-      .range([0, width])
-      .domain([0, yMax]);
+      .domain([0, yMax])
+      .range([height, 0]);
 
   const initSvg = function () {
     let chart = d3.select('.chart');
@@ -39,31 +37,28 @@ export default function (config, data) {
     if (axis.empty()) {
       axis = el.append('g')
         .attr('class', 'axis axis--x')
-        .attr('transform', `translate(${leftPadding},${height})`);
+        .attr('transform', `translate(0,${height + 7})`);
     }
 
     axis.transition(t)
-        .call(d3.axisBottom(xScale).tickFormat(xFormat))
-      // .selectAll('g')
-      //   .delay(delay);
+        .call(d3.axisBottom(xScale).tickFormat(xFormat));
   };
 
   const drawYAxis = function (el, t) {
     let axis = el.select('.axis--y');
     if (axis.empty()) {
       axis = el.append('g')
-        .attr('class', 'axis axis--y');
+        .attr('class', 'axis axis--y')
+        .attr('transform', 'translate(-3, 0)');
     }
 
     axis.transition(t)
-        .call(d3.axisLeft(yScale))
-      // .selectAll('g')
-      //   .delay(delay);
+        .call(d3.axisLeft(yScale));
   };
 
   const line = d3.line()
-      .x(config.xAccessor)
-      .y(config.xAccessor);
+      .x(d => xScale(config.xAccessor(d)))
+      .y(d => yScale(config.yAccessor(d)));
 
   const drawLines = function (el, data) {
     let linesG = el.select('.lines-g');
@@ -74,7 +69,7 @@ export default function (config, data) {
 
     const lines = linesG
       .selectAll('.line')
-      .data(data, yAccessor);
+      .data(data);
     lines.exit()
       .remove();
     lines.enter()

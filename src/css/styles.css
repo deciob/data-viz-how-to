@@ -52,7 +52,7 @@ html, body, body > div, .app {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #d9e3ec;
+  background-color: #fff;
 }
 
 .narrative {
@@ -75,6 +75,8 @@ html, body, body > div, .app {
   justify-content: space-around;
 }
 
-svg text {
-
+.lines-g path {
+  stroke: #b9b9b9;
+  stroke-width: 1.5;
+  fill: none;
 }

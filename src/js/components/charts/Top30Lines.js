@@ -9,14 +9,15 @@ class Top30Lines extends React.Component {
 
   prepareArgs () {
     const element = ReactDOM.findDOMNode(this);
-    const allData = (this.props.data[this.props.id] || []);
+    const flatData = (this.props.data[this.props.id] || []);
+    const data = d3.nest().key(d => d.urbanAgglomeration).map(flatData).values();
     const config = {
       width: element.clientWidth,
       height: element.clientHeight,
       xAccessor: d => d.year,
       yAccessor: d => d.population,
     };
-    return [config, allData];
+    return [config, data, flatData];
   }
 
   componentDidMount () {
