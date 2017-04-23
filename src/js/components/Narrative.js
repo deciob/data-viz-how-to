@@ -17,7 +17,7 @@ Narrative.propTypes = {
 const mapStateToProps = (state) => {
   const location = state.navigationReducer.location;
   return {
-    id: location.options.id,
+    id: location.options.dataset,
     version: location.options.version,
   };
 };

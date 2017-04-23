@@ -50,7 +50,7 @@ function appReducer (state = {
         data: Object.assign(
           {},
           state.data,
-          {[action.params.id]: d3.csvParse(action.data, dataFormatter)}
+          {[action.params.dataset]: d3.csvParse(action.data, dataFormatter)}
         ),
       });
 

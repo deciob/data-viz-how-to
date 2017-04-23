@@ -45,7 +45,7 @@ function fetchData (params) {
   return dispatch => {
     dispatch(requestData(params));
 
-    const url = configuration.urls[params.id];
+    const url = configuration.urls[params.dataset];
 
     return window.fetch(url)
       .then(response => response.text())

@@ -26,18 +26,10 @@ const store = createStore(
   ),
 );
 
-store.dispatch(fetchData({id: 'viz1'}));
+store.dispatch(fetchData({dataset: 'viz1'}));
 // .then(() =>
 //   console.log('xxx', store.getState())
 // );
-
-// store.dispatch({
-//   type: SET_HEADER,
-//   header: {
-//     title: 'Hello!',
-//     tagline: 'All is fine!',
-//   },
-// });
 
 store.subscribe(function () {
   ReactDOM.render(
@@ -47,14 +39,6 @@ store.subscribe(function () {
     document.getElementById('root')
   );
 });
-
-// store.subscribe(function () {
-//   // Don't re-render if we're in the process of navigating to a new page
-//   ReactDOM.render(
-//     <Application state={store.getState()} dispatch={store.dispatch} />,
-//     document.getElementById('root')
-//   );
-// });
 
 // Dispatch navigation events when the URL's hash changes, and when the
 // application loads

@@ -62,7 +62,7 @@ const mapStateToProps = (state) => {
   return {
     data: state.appReducer.data,
     currentYear: state.appReducer.currentYear,
-    id: location.options.id,
+    id: location.options.dataset,
     version: location.options.version,
   };
 };

@@ -6,7 +6,6 @@ import linechart from '../../charts/linechart';
 /* eslint-enable no-unused-vars */
 
 class Top30Lines extends React.Component {
-
   prepareArgs () {
     const element = ReactDOM.findDOMNode(this);
     const flatData = (this.props.data[this.props.id] || []);
@@ -50,7 +49,7 @@ const mapStateToProps = (state) => {
   const location = state.navigationReducer.location;
   return {
     data: state.appReducer.data,
-    id: location.options.id,
+    id: location.options.dataset,
     version: location.options.version,
   };
 };
