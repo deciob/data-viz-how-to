@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import linechart from '../../charts/linechart';
+import helpers from '../../helpers';
 /* eslint-enable no-unused-vars */
 
 class Top30Lines extends React.Component {
@@ -49,7 +50,7 @@ const mapStateToProps = (state) => {
   const location = state.navigationReducer.location;
   return {
     data: state.appReducer.data,
-    id: location.options.dataset,
+    id: helpers.snakeToCamel(location.options.dataset),
     version: location.options.version,
   };
 };

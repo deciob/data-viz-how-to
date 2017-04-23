@@ -26,7 +26,7 @@ const store = createStore(
   ),
 );
 
-store.dispatch(fetchData({dataset: 'viz1'}));
+store.dispatch(fetchData({dataset: 'top-30-urban-agglomerations'}));
 // .then(() =>
 //   console.log('xxx', store.getState())
 // );

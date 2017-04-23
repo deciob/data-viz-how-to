@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import barchart from '../../charts/barchart';
+import helpers from '../../helpers';
 /* eslint-enable no-unused-vars */
 
 class Top30Bars extends React.Component {
@@ -62,7 +63,7 @@ const mapStateToProps = (state) => {
   return {
     data: state.appReducer.data,
     currentYear: state.appReducer.currentYear,
-    id: location.options.dataset,
+    id: helpers.snakeToCamel(location.options.dataset),
     version: location.options.version,
   };
 };

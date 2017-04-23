@@ -1,5 +1,6 @@
 import configuration from './configuration';
 import Routes from './Routes';
+import helpers from './helpers';
 
 const NAVIGATION_COMPLETE = 'NAVIGATION_COMPLETE';
 
@@ -45,7 +46,7 @@ function fetchData (params) {
   return dispatch => {
     dispatch(requestData(params));
 
-    const url = configuration.urls[params.dataset];
+    const url = configuration.urls[helpers.snakeToCamel(params.dataset)];
 
     return window.fetch(url)
       .then(response => response.text())

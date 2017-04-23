@@ -2,6 +2,7 @@
 import React, { PropTypes } from 'react';
 import { createStore } from 'redux';
 import { connect } from 'react-redux';
+import helpers from '../helpers';
 /* eslint-enable no-unused-vars */
 
 const Header = ({ id, version }) => (
@@ -22,7 +23,7 @@ Header.propTypes = {
 const mapStateToProps = (state) => {
   const location = state.navigationReducer.location;
   return {
-    id: location.options.dataset,
+    id: helpers.snakeToCamel(location.options.dataset),
     version: location.options.version,
   };
 };

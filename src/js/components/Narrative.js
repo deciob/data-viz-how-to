@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
+import helpers from '../helpers';
 /* eslint-enable no-unused-vars */
 
 function Narrative ({id, version}) {
@@ -17,7 +18,7 @@ Narrative.propTypes = {
 const mapStateToProps = (state) => {
   const location = state.navigationReducer.location;
   return {
-    id: location.options.dataset,
+    id: helpers.snakeToCamel(location.options.dataset),
     version: location.options.version,
   };
 };

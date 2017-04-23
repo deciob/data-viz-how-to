@@ -5,6 +5,7 @@ import {
   REQUEST_DATA,
   RECEIVE_DATA,
 } from './actions';
+import helpers from './helpers';
 
 const dataFormatter = function (d) {
   return {
@@ -50,7 +51,8 @@ function appReducer (state = {
         data: Object.assign(
           {},
           state.data,
-          {[action.params.dataset]: d3.csvParse(action.data, dataFormatter)}
+          {[helpers.snakeToCamel(action.params.dataset)]:
+            d3.csvParse(action.data, dataFormatter)}
         ),
       });
 

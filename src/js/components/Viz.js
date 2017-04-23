@@ -8,9 +8,9 @@ import Narrative from './Narrative';
 
 function Viz (props) {
   let chart;
-  if (props.options.dataset === 'viz1' && props.options.version === 'a') {
+  if (props.options.dataset === 'top-30-urban-agglomerations' && props.options.version === 'a') {
     chart = <Top30Lines/>;
-  } else if (props.options.dataset === 'viz1' && props.options.version === 'b') {
+  } else if (props.options.dataset === 'top-30-urban-agglomerations' && props.options.version === 'b') {
     chart = <Top30Bars/>;
   } else {
     chart = <div>Nothing!</div>;
