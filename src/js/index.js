@@ -13,7 +13,7 @@ import App from './App';
 import {SET_HEADER, navigationComplete, fetchData} from './actions';
 /* eslint-enable no-unused-vars */
 
-const loggerMiddleware = createLogger();
+// const loggerMiddleware = createLogger();
 
 const store = createStore(
   reducer,

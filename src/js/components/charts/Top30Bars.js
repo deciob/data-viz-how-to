@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import barchart from '../../charts/barchart';
 import helpers from '../../helpers';
+import YearControls from '../YearControls';
 /* eslint-enable no-unused-vars */
 
 class Top30Bars extends React.Component {
-
   prepareArgs () {
     const element = ReactDOM.findDOMNode(this);
     const allData = this.props.data[this.props.id] || [];
@@ -47,7 +47,11 @@ class Top30Bars extends React.Component {
   }
 
   render () {
-    return <div className="chart"></div>;
+    return <div>
+      <div className="current-year">{this.props.currentYear}</div>
+      <div className="chart"></div>
+      <YearControls/>
+    </div>;
   }
 }
 

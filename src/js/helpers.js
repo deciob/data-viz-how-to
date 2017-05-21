@@ -6,4 +6,8 @@ export default {
   snakeToCamel: function snakeToCamel (s) {
     return s.replace(/-([a-z0-9])/g, function (g) { return g[1].toUpperCase(); });
   },
+
+  getMinMax: function getMinMax (data, transformFunc) {
+    return {min: 0, max: 0};
+  },
 };

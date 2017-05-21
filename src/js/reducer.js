@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import {
   NAVIGATION_COMPLETE,
   SET_HEADER,
+  UPDATE_CURRENT_YEAR,
   REQUEST_DATA,
   RECEIVE_DATA,
 } from './actions';
@@ -32,7 +33,8 @@ function navigationReducer (state = {
 }
 
 function appReducer (state = {
-  currentYear: 1950,
+  allYears: [],
+  currentYear: 0,
   data: {},
   isFetching: false,
 }, action) {
@@ -40,19 +42,27 @@ function appReducer (state = {
     case SET_HEADER:
       return { ...state, header: action.header };
 
+    case UPDATE_CURRENT_YEAR:
+      return { ...state, currentYear: action.currentYear };
+
     case REQUEST_DATA:
       return Object.assign({}, state, {
         isFetching: true,
       });
 
     case RECEIVE_DATA:
+      const d = d3.csvParse(action.data, dataFormatter);
+      // TODO
+      // const dYearsSet = new Set();
+      // firstLast = d.reduce((acc, val) => {
+      //
+      // }, []);
       return Object.assign({}, state, {
         isFetching: false,
         data: Object.assign(
           {},
           state.data,
-          {[helpers.snakeToCamel(action.params.dataset)]:
-            d3.csvParse(action.data, dataFormatter)}
+          {[helpers.snakeToCamel(action.params.dataset)]: d}
         ),
       });
 

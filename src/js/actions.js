@@ -21,6 +21,15 @@ function setHeader (header) {
   };
 }
 
+const UPDATE_CURRENT_YEAR = 'UPDATE_CURRENT_YEAR';
+
+function updateCurrentYear (year) {
+  return {
+    type: UPDATE_CURRENT_YEAR,
+    year,
+  };
+}
+
 const REQUEST_DATA = 'REQUEST_DATA';
 
 function requestData (params) {
@@ -61,6 +70,8 @@ function fetchData (params) {
 export {
   SET_HEADER,
   setHeader,
+  UPDATE_CURRENT_YEAR,
+  updateCurrentYear,
   NAVIGATION_COMPLETE,
   navigationComplete,
   REQUEST_DATA,

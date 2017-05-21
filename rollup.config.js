@@ -20,6 +20,7 @@ export default {
       exclude: [
         'node_modules/**',
         'src/css/**',
+        'src/js/**/*.test.js',
       ],
       presets: [ [ 'es2015', { modules: false } ], 'react' ],
       // presets: [ 'react' ],
