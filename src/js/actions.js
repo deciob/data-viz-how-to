@@ -30,6 +30,14 @@ function updateCurrentYear (year) {
   };
 }
 
+const PLAY_MODE = 'PLAY_MODE';
+
+function playMode () {
+  return {
+    type: PLAY_MODE,
+  };
+}
+
 const REQUEST_DATA = 'REQUEST_DATA';
 
 function requestData (params) {
@@ -72,6 +80,8 @@ export {
   setHeader,
   UPDATE_CURRENT_YEAR,
   updateCurrentYear,
+  PLAY_MODE,
+  playMode,
   NAVIGATION_COMPLETE,
   navigationComplete,
   REQUEST_DATA,

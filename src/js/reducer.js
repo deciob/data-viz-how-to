@@ -3,6 +3,7 @@ import {
   NAVIGATION_COMPLETE,
   SET_HEADER,
   UPDATE_CURRENT_YEAR,
+  PLAY_MODE,
   REQUEST_DATA,
   RECEIVE_DATA,
 } from './actions';
@@ -35,7 +36,9 @@ function navigationReducer (state = {
 function appReducer (state = {
   allYears: [],
   currentYear: 0,
+  playMode: false,
   data: {},
+  firstLastYears: {first: 0, last: 0},
   isFetching: false,
 }, action) {
   switch (action.type) {
@@ -45,6 +48,9 @@ function appReducer (state = {
     case UPDATE_CURRENT_YEAR:
       return { ...state, currentYear: action.currentYear };
 
+    case PLAY_MODE:
+      return { ...state, playMode: !state.playMode };
+
     case REQUEST_DATA:
       return Object.assign({}, state, {
         isFetching: true,
@@ -52,18 +58,16 @@ function appReducer (state = {
 
     case RECEIVE_DATA:
       const d = d3.csvParse(action.data, dataFormatter);
-      // TODO
-      // const dYearsSet = new Set();
-      // firstLast = d.reduce((acc, val) => {
-      //
-      // }, []);
+      const minMaxYears = helpers.getMinMax(d, d => d.year);
       return Object.assign({}, state, {
-        isFetching: false,
+        currentYear: minMaxYears.min,
         data: Object.assign(
           {},
           state.data,
           {[helpers.snakeToCamel(action.params.dataset)]: d}
         ),
+        firstLastYears: {first: minMaxYears.min, last: minMaxYears.max},
+        isFetching: false,
       });
 
     default:
