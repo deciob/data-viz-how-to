@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import barchart from '../../charts/barchart';
 import helpers from '../../helpers';
 import YearControls from '../YearControls';
+import { top30StartEndYearSelector } from '../../selectors';
 /* eslint-enable no-unused-vars */
 
 class Top30Bars extends React.Component {
@@ -48,7 +49,10 @@ class Top30Bars extends React.Component {
 
   render () {
     return <div>
-      <div className="current-year">{this.props.currentYear}</div>
+      <div className="current-year">
+        <h4>{this.props.currentYear}</h4>
+        <h4>{this.props.firstLastYears.first} - {this.props.firstLastYears.last}</h4>
+      </div>
       <div className="chart"></div>
       <YearControls/>
     </div>;
@@ -69,6 +73,7 @@ const mapStateToProps = (state) => {
     currentYear: state.appReducer.currentYear,
     id: helpers.snakeToCamel(location.options.dataset),
     version: location.options.version,
+    firstLastYears: top30StartEndYearSelector(state),
   };
 };
 

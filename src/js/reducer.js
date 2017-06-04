@@ -34,11 +34,10 @@ function navigationReducer (state = {
 }
 
 function appReducer (state = {
-  allYears: [],
+  allYears: [], // candidate for reselect
   currentYear: 0,
   playMode: false,
   data: {},
-  firstLastYears: {first: 0, last: 0},
   isFetching: false,
 }, action) {
   switch (action.type) {
@@ -66,7 +65,6 @@ function appReducer (state = {
           state.data,
           {[helpers.snakeToCamel(action.params.dataset)]: d}
         ),
-        firstLastYears: {first: minMaxYears.min, last: minMaxYears.max},
         isFetching: false,
       });
 

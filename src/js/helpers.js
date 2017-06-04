@@ -8,12 +8,15 @@ export default {
   },
 
   getMinMax: function getMinMax (data, transformFunc) {
-    return data.map(transformFunc)
-      .reduce((acc, d) => {
-        return {
-          min: d < acc.min ? d : acc.min,
-          max: d > acc.max ? d : acc.max,
-        };
-      }, {min: Math.min(), max: Math.max()});
+    if (data && data.length > 0) {
+      return data.map(transformFunc)
+        .reduce((acc, d) => {
+          return {
+            min: d < acc.min ? d : acc.min,
+            max: d > acc.max ? d : acc.max,
+          };
+        }, {min: Math.min(), max: Math.max()});
+    }
+    return {first: 0, last: 0};
   },
 };
