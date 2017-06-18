@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import { createStore } from 'redux';
 import { connect } from 'react-redux';
 import Viz from './components/Viz';
 import Intro from './components/Intro';

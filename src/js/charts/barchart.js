@@ -7,8 +7,10 @@ export default function (config, data) {
   let svg;
 
   const delay = function (d, i) {
-    return i * config.delayBaseline;
+    return config.delay !== undefined ? config.delay : i * config.delayBaseline;
   };
+
+  const duration = config.delay === 0 ? 0 : 600;
 
   const xAccessor = config.xAccessor || (d => d.x);
   const yAccessor = config.yAccessor || (d => d.y);
@@ -24,6 +26,13 @@ export default function (config, data) {
       .domain(yDomain)
       .padding(0.1);
 
+  const transition = d3.transition()
+      .duration(duration)
+      .delay(delay)
+      .on('end', () => {
+        config.dispatch.call('transitionBarsEnd');
+      });
+
   const initSvg = function () {
     let chart = d3.select('.chart');
     let svg = chart.select('svg');
@@ -37,7 +46,7 @@ export default function (config, data) {
     return svg;
   };
 
-  const drawXAxis = function (el, t) {
+  const drawXAxis = function (el) {
     let axis = el.select('.axis--x');
     if (axis.empty()) {
       axis = el.append('g')
@@ -45,26 +54,24 @@ export default function (config, data) {
         .attr('transform', `translate(${leftPadding},${height})`);
     }
 
-    axis.transition(t)
+    axis.transition(transition)
         .call(d3.axisBottom(xScale).tickFormat(xFormat))
-      .selectAll('g')
-        .delay(delay);
+      .selectAll('g');
   };
 
-  const drawYAxis = function (el, t) {
+  const drawYAxis = function (el) {
     let axis = el.select('.axis--y');
     if (axis.empty()) {
       axis = el.append('g')
         .attr('class', 'axis axis--y');
     }
 
-    axis.transition(t)
+    axis.transition(transition)
         .call(d3.axisLeft(yScale))
-      .selectAll('g')
-        .delay(delay);
+      .selectAll('g');
   };
 
-  const drawBars = function (el, data, t) {
+  const drawBars = function (el, data) {
     let barsG = el.select('.bars-g');
     if (barsG.empty()) {
       barsG = el.append('g')
@@ -76,21 +83,22 @@ export default function (config, data) {
       .data(data, yAccessor);
     bars.exit()
       .remove();
+
     bars.enter()
       .append('rect')
         .attr('class', 'bar')
         .attr('x', leftPadding)
-      .merge(bars).transition(t)
+      .merge(bars)
+        .transition(transition)
         .attr('y', d => yScale(yAccessor(d)))
         .attr('width', d => {
           return xScale(xAccessor(d));
         })
-        .attr('height', yScale.bandwidth())
-        .delay(delay);
+        .attr('height', yScale.bandwidth());
   };
 
   svg = initSvg();
-  drawXAxis(svg, 50);
-  drawYAxis(svg, 50);
-  drawBars(svg, data, 50);
+  drawXAxis(svg);
+  drawYAxis(svg);
+  drawBars(svg, data);
 }

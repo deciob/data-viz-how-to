@@ -2,14 +2,14 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import {
-  PLAY_MODE,
   playMode,
+  updateCurrentYear,
 } from '../actions';
 /* eslint-enable no-unused-vars */
 
 const YearControls = ({currentYear, playMode, onStartAnimationClick}) => (
   <div className="year-controls">
-    <button disabled={playMode} onClick={() => onStartAnimationClick()}>
+    <button disabled={playMode} onClick={() => onStartAnimationClick(currentYear)}>
       Start Animation
     </button>
     <button disabled={!playMode} onClick={() => onStartAnimationClick()}>
@@ -28,7 +28,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onStartAnimationClick: () => {
+    onStartAnimationClick: (year) => {
+      dispatch(updateCurrentYear(year + 5));
       dispatch(playMode());
     },
   };

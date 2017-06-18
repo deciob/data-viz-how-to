@@ -30,6 +30,16 @@ function updateCurrentYear (year) {
   };
 }
 
+// const INCREASE_CURRENT_YEAR = 'INCREASE_CURRENT_YEAR';
+//
+// function increaseCurrentYear (year) {
+//   const nextYear = year + 1;
+//   return {
+//     type: INCREASE_CURRENT_YEAR,
+//     nextYear,
+//   };
+// }
+
 const PLAY_MODE = 'PLAY_MODE';
 
 function playMode () {
@@ -89,4 +99,6 @@ export {
   RECEIVE_DATA,
   receiveData,
   fetchData,
+  // INCREASE_CURRENT_YEAR,
+  // increaseCurrentYear,
 };

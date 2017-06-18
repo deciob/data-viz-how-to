@@ -3,6 +3,7 @@ import {
   NAVIGATION_COMPLETE,
   SET_HEADER,
   UPDATE_CURRENT_YEAR,
+  // INCREASE_CURRENT_YEAR,
   PLAY_MODE,
   REQUEST_DATA,
   RECEIVE_DATA,
@@ -45,7 +46,10 @@ function appReducer (state = {
       return { ...state, header: action.header };
 
     case UPDATE_CURRENT_YEAR:
-      return { ...state, currentYear: action.currentYear };
+      return { ...state, currentYear: action.year };
+
+    // case INCREASE_CURRENT_YEAR:
+    //   return { ...state, currentYear: action.increaseCurrentYear };
 
     case PLAY_MODE:
       return { ...state, playMode: !state.playMode };
